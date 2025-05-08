@@ -1,38 +1,140 @@
-.App {
+.book-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.page {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  font-family: "Georgia", serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.cover-page {
+  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+  color: white;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card-content h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.card-content p {
+  font-size: 18px;
+  margin-bottom: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.open-button {
+  background-color: #ffffff;
+  color: #ff6f91;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+
+.open-button:hover {
+  transform: scale(1.05);
+}
+
+.inside-page {
+  background: url("https://www.transparenttextures.com/patterns/hearts.png"), #fff0f5;
+  background-size: contain;
+  color: #6b0f1a;
+  text-align: center;
+  padding: 30px;
+}
+
+.message-content {
+  max-height: 90%;
+  overflow-y: auto;
+  padding-right: 10px;
+  text-align: left;
+}
+
+/* Custom thin scrollbar */
+.message-content::-webkit-scrollbar {
+  width: 1px; /* thin scrollbar */
+}
+
+.message-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.message-content::-webkit-scrollbar-thumb {
+  background-color: #ff69b4; /* pink color */
+  border-radius: 4px;
+}
+
+
+
+.message-content h2 {
+  font-family: "Cursive", sans-serif;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.message-content p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.cover-page {
+  background: linear-gradient(135deg, #f7b7d8 0%, #fbd3e0 100%); /* Softer pink gradient */
+  color: #4a1f2a;  /* Darker font color for contrast */
+  text-align: center;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Light shadow for elegance */
+}
+
+.card-content h1 {
+  font-size: 36px;
+  font-family: 'Georgia', serif;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+  color: #b36b76; /* Soft pinkish color */
+}
+
+.card-content p {
+  font-size: 18px;
+  font-family: 'Arial', sans-serif;
+  margin-bottom: 25px;
+  color: #6a4a5a; /* Light, warm text color */
+}
+
+.open-button {
+  background-color: #ff69b4;  /* Pink button */
   color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
-.App-link {
-  color: #61dafb;
+.open-button:hover {
+  transform: scale(1.05);
+  background-color: #f72585;  /* Slightly darker pink for hover effect */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cover-page:before {
+  content: "💖";  /* Heart symbol */
+  font-size: 50px;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  opacity: 0.3;
 }
