@@ -28,7 +28,7 @@ function App() {
         <Page className="cover-page">
   <div className="card-content">
     <h1>Happy 7th Anniversary</h1>
-    <p>To my beautiful soulmate</p>
+    <p>To my beautiful soulmate,</p>
     <p>Seven years of love, laughter, and unforgettable memories!</p>
     <button className="open-button" onClick={handleOpenClick}>
       Click to Open
